@@ -64,17 +64,17 @@ headless browser to a Docker container by hand.
 ## Repo layout
 
 bugtriage/
-├── target_app/ # deliberately-buggy checkout app (real, reproducible JS bug)
-├── pipeline/
-│ ├── desktop_repro.py # step 1: reproduce on Solari Desktop, record
-│ ├── sandbox_diagnose.py # step 2: static analysis + patch + real patch verification
-│ ├── browser_check.py # step 3: prior-art check via Solari Browser + GitHub API
-│ └── orchestrator.py # wires all three into one triage run
-├── evidence/
-│ ├── sandbox_escape_demo.py # contrast #2 — network egress + cross-session isolation
-│ ├── parallel_scale_demo.py # contrast #1 — real concurrent sessions, respects plan cap
-│ └── local_infra_estimate.md # the DIY-cost side of the diff
-└── requirements.txt
+ ├── target_app/ # deliberately-buggy checkout app (real, reproducible JS bug)
+ ├── pipeline/
+ │ ├── desktop_repro.py # step 1: reproduce on Solari Desktop, record
+ │ ├── sandbox_diagnose.py # step 2: static analysis + patch + real patch verification
+ │ ├── browser_check.py # step 3: prior-art check via Solari Browser + GitHub API
+ │ └── orchestrator.py # wires all three into one triage run
+ ├── evidence/
+ │ ├── sandbox_escape_demo.py # contrast #2 — network egress + cross-session isolation
+ │ ├── parallel_scale_demo.py # contrast #1 — real concurrent sessions, respects plan cap
+ │ └── local_infra_estimate.md # the DIY-cost side of the diff
+ └── requirements.txt
 
 
 ## Setup
